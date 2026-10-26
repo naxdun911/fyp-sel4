@@ -1,0 +1,10 @@
+--- libsel4benchsupport/include/smp.h.orig	2026-10-21 20:18:30.331731235 +0530
++++ libsel4benchsupport/include/smp.h	2026-10-21 20:18:30.335855373 +0530
+@@ -20,6 +20,7 @@
+ 
+ static const
+ benchmark_params_t smp_benchmark_params[] = {
++    { .name = "0 cycles",     .delay = 0.00000, },
+     { .name = "500 cycles",   .delay = 500.000, },
+     { .name = "4000 cycles",  .delay = 4000.00, },
+     { .name = "32000 cycles", .delay = 32000.0, },

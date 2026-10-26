@@ -1,0 +1,102 @@
+./simulate: QEMU command: qemu-system-aarch64 -machine virt,virtualization=on,highmem=off,secure=off,gic-version=2 -cpu cortex-a53 -nographic  -m size=1024 -smp 4 -kernel images/sel4benchapp-image-arm-qemu-arm-virt 
+ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+  paddr=[604c2000..606ec097]
+No DTB passed in from boot loader.
+Looking for DTB in CPIO archive...found at 604ed828.
+Loaded DTB from 604ed828.
+   paddr=[60236000..60238fff]
+ELF-loading image 'kernel' to 60000000
+  paddr=[60000000..60235fff]
+  vaddr=[ffc0000000..ffc0235fff]
+  virt_entry=ffc0000000
+ELF-loading image 'rootserver' to 60239000
+  paddr=[60239000..604a1fff]
+  vaddr=[400000..668fff]
+  virt_entry=421e08
+Boot cpu id = 0x0, index=0
+Core 1 is up with logic id 1
+Core 2 is up with logic id 2
+Core 3 is up with logic id 3
+Enabling hypervisor MMU and jumping to entry point...
+
+Range for vaddr 0x10001000 with 1 4k pages not reserved!
+Mapping new pages to extend brk region failed
+
+
+[;1m[37mse[32mL4[37m Benchmark[0m
+[32m==============[37m
+
+Switching to a safer, bigger stack... 
+Setting up global fault handler...
+Failed to allocate object of size 140737488355328, error 1
+Failed to allocate object of size 70368744177664, error 1
+Failed to allocate object of size 35184372088832, error 1
+Failed to allocate object of size 17592186044416, error 1
+Failed to allocate object of size 8796093022208, error 1
+Failed to allocate object of size 4398046511104, error 1
+Failed to allocate object of size 2199023255552, error 1
+Failed to allocate object of size 1099511627776, error 1
+Failed to allocate object of size 549755813888, error 1
+Failed to allocate object of size 274877906944, error 1
+Failed to allocate object of size 137438953472, error 1
+Failed to allocate object of size 68719476736, error 1
+Failed to allocate object of size 34359738368, error 1
+Failed to allocate object of size 17179869184, error 1
+Failed to allocate object of size 8589934592, error 1
+Failed to allocate object of size 4294967296, error 1
+Failed to allocate object of size 2147483648, error 1
+Failed to allocate object of size 1073741824, error 1
+Failed to allocate object of size 536870912, error 1
+Failed to allocate object of size 268435456, error 1
+
+ipc Benchmarks (iteration 0)
+============================
+
+
+irquser Benchmarks (iteration 0)
+================================
+
+[0m[33mPlatform does not support ltimers
+Benchmark failed, result 1
+
+[0mRegister dump:
+pc:	0x40f834
+sp:	0x10011670
+spsr:	0x60000140
+x0:	0x2
+x1:	0x1
+x2:	0x1
+x3:	0x22
+x4:	0x15
+x5:	0x0
+x6:	0x74f0a8
+x7:	0xffffffffffffffff
+x8:	0x10000000
+x16:	0x424ba4
+x17:	0x7f00000
+x18:	0xf
+x29:	0x10011670
+x30:	0x40f808
+x9:	0x72656d69746c2074
+x10:	0x64206d726f667461
+x11:	0x20746f6e2073656f
+x12:	0x2074726f70707573
+x13:	0xa7372656d69746c
+x14:	0x10011900
+x15:	0x10011930
+x19:	0x1
+x20:	0x74a010
+x21:	0x10011e08
+x22:	0x4001f0
+x23:	0x0
+x24:	0x0
+x25:	0x0
+x26:	0x0
+x27:	0x0
+x28:	0x0
+tpidr_el0:	0x74f098
+tpidrro_el0:	0x0
+[Cond failed: result == NULL]
+	Failed to run benchmark irquser
+QEMU: Terminated
+

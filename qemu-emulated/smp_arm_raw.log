@@ -1,0 +1,21 @@
+./simulate: QEMU command: qemu-system-aarch64 -machine virt,gic-version=2 -cpu cortex-a53 -nographic  -m size=1024 -smp 4 -machine virt,virtualization=on -kernel images/sel4benchapp-image-arm-qemu-arm-virt 
+ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+  paddr=[404ba000..406e5097]
+No DTB passed in from boot loader.
+Looking for DTB in CPIO archive...found at 404e3ff0.
+Loaded DTB from 404e3ff0.
+   paddr=[4022f000..40230fff]
+ELF-loading image 'kernel' to 40000000
+  paddr=[40000000..4022efff]
+  vaddr=[ffffffffc0000000..ffffffffc022efff]
+  virt_entry=ffffffffc0000000
+ELF-loading image 'rootserver' to 40231000
+  paddr=[40231000..40499fff]
+  vaddr=[400000..668fff]
+  virt_entry=4227a8
+Boot cpu id = 0x0, index=0
+HVC is not supported for PSCI!
+Failed to boot cpu 0x1: 18446744073709551615
+abort() called.
+QEMU: Terminated
+

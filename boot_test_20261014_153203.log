@@ -1,0 +1,36 @@
+
+
+U-Boot 2024.01 (Oct 14 2026 - 14:45:42 +0530)
+
+DRAM:  948 MiB (effective 7.9 GiB)
+RPI 4 Model B (0xd03115)
+Core:  213 devices, 16 uclasses, devicetree: board
+MMC:   mmcnr@7e300000: 1, mmc@7e340000: 0
+Loading Environment from FAT... Unable to read "uboot.env" from mmc0:1... 
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+Net:   eth0: ethernet@7d580000
+PCIe BRCM: link up, 5.0 Gbps x1 (SSC)
+starting USB...
+Bus xhci_pci: Register 5000420 NbrPorts 5
+Starting the controller
+USB XHCI 1.00
+scanning bus xhci_pci for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Hit any key to stop autoboot:  2  1  0 
+U-Boot> fatload mmc 0 0x10000000 sel4benchapp-image-arm-bcm2711
+996944 bytes read in 99 ms (9.6 MiB/s)
+U-Boot> 
+U-Boot> bootelf 0x10000000
+## No elf image at address 0x10000000
+U-Boot> bootefi 0x10000000
+7[r[999;999H[6n8Card did not respond to voltage select! : -110
+No EFI system partition
+No EFI system partition
+Failed to persist EFI variables
+No UEFI binary known at 0x10000000
+U-Boot> 
+  base bdinfo blkcache boot bootd bootefi bootelf bootflow booti bootm bootp
+  bootvx cls cmp coninfo cp crc32 dfu ...
+U-Boot> 

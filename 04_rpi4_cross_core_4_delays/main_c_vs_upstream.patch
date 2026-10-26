@@ -1,0 +1,29 @@
+--- apps/smp/src/main.c.orig	2026-10-22 08:18:38.688360015 +0530
++++ apps/smp/src/main.c	2026-10-22 08:18:38.717496652 +0530
+@@ -24,6 +24,9 @@
+ #define N_ARGS 5
+ #define ZIGSEED 12345678
+ 
++/* Core offset of pong relative to ping: 0 = same-core pairs, 2 = cross-core pairs. */
++#define PONG_CORE_OFFSET 2
++
+ static double current_delay_cycle;
+ 
+ typedef struct _per_core_data {
+@@ -293,7 +296,15 @@
+ 
+         error = sel4utils_set_sched_affinity(&pp_threads[i].ping, params);
+         assert(!error);
+-        error = sel4utils_set_sched_affinity(&pp_threads[i].pong, params);
++        /* pong runs on core (i + PONG_CORE_OFFSET) % nr_cores */
++        sched_params_t pong_params = {0};
++#ifdef CONFIG_KERNEL_MCS
++        pong_params = sched_params_round_robin(pong_params, &env->simple, (i + PONG_CORE_OFFSET) % nr_cores,
++                                               CONFIG_BOOT_THREAD_TIME_SLICE * US_IN_MS);
++#else
++        pong_params.core = (i + PONG_CORE_OFFSET) % nr_cores;
++#endif
++        error = sel4utils_set_sched_affinity(&pp_threads[i].pong, pong_params);
+         assert(!error);
+     }
+ 

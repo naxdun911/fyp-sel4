@@ -1,0 +1,205 @@
+
+
+U-Boot 2024.01 (Oct 14 2026 - 14:45:42 +0530)
+
+DRAM:  948 MiB (effective 7.9 GiB)
+RPI 4 Model B (0xd03115)
+Core:  213 devices, 16 uclasses, devicetree: board
+MMC:   mmcnr@7e300000: 1, mmc@7e340000: 0
+Loading Environment from FAT... Unable to read "uboot.env" from mmc0:1... 
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+Net:   eth0: ethernet@7d580000
+PCIe BRCM: link up, 5.0 Gbps x1 (SSC)
+starting USB...
+Bus xhci_pci: Register 5000420 NbrPorts 5
+Starting the controller
+USB XHCI 1.00
+scanning bus xhci_pci for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Hit any key to stop autoboot:  2  1  0 
+U-Boot> fatload mmc 0 0x10000000 sel4benchapp-image-arm-bcm2711
+1078800 bytes read in 106 ms (9.7 MiB/s)
+U-Boot> bootelf         bootelf 0x10000000
+"Synchronous Abort" handler, esr 0x96000004, far 0xf9400261a10000a7
+elr: 00000000000e9d8c lr : 00000000000e9dd8 (reloc)
+elr: 000000003b3b2d8c lr : 000000003b3b2dd8
+x0 : 0000000000000011 x1 : 0000000010000040
+x2 : 0000000000000040 x3 : 000000000000003f
+x4 : 0000000010000030 x5 : 00000000000000d6
+x6 : 000000003b3bd08f x7 : 0000000000000044
+x8 : 0000000000000010 x9 : 0000000000000000
+x10: 000000000000000a x11: 000000003af50fe8
+x12: 0000000000000000 x13: 0000000000000200
+x14: 00000000ffffffff x15: 000000003af368a8
+x16: 000000003b358f78 x17: 0000000000000000
+x18: 000000003af44d60 x19: f9400261a100009f
+x20: 0000000010000000 x21: 0000000000000002
+x22: 000000003af56a20 x23: 0000000000000002
+x24: 000000003b3e61ec x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 000000003af5a330 x29: 000000003af368c0
+
+Code: d65f03c0 f9401693 8b130293 8b151a73 (f9400660) 
+Resetting CPU ...
+
+resetting ...
+
+
+U-Boot 2024.01 (Oct 14 2026 - 14:45:42 +0530)
+
+DRAM:  948 MiB (effective 7.9 GiB)
+RPI 4 Model B (0xd03115)
+Core:  213 devices, 16 uclasses, devicetree: board
+MMC:   mmcnr@7e300000: 1, mmc@7e340000: 0
+Loading Environment from FAT... Unable to read "uboot.env" from mmc0:1... 
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+Net:   eth0: ethernet@7d580000
+PCIe BRCM: link up, 5.0 Gbps x1 (SSC)
+starting USB...
+Bus xhci_pci: Register 5000420 NbrPorts 5
+Starting the controller
+USB XHCI 1.00
+scanning bus xhci_pci for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Hit any key to stop autoboot:  2  1  0 
+Card did not respond to voltage select! : -110
+ethernet@7d580000 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+bcmgenet: PHY startup failed: -110
+ethernet@7d580000 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+bcmgenet: PHY startup failed: -110
+U-Boot> fatload mmc 0 0x10000000 sel4benchapp-image-arm-bcm2711
+1078800 bytes read in 106 ms (9.7 MiB/s)
+U-Boot> bootelf 0x10000000
+"Synchronous Abort" handler, esr 0x96000004, far 0xf9400261a10000a7
+elr: 00000000000e9d8c lr : 00000000000e9dd8 (reloc)
+elr: 000000003b3b2d8c lr : 000000003b3b2dd8
+x0 : 0000000000000011 x1 : 0000000010000040
+x2 : 0000000000000040 x3 : 000000000000003f
+x4 : 0000000010000030 x5 : 00000000000000d6
+x6 : 000000003b3bd08f x7 : 0000000000000044
+x8 : 0000000000000010 x9 : 0000000000000000
+x10: 000000000000000a x11: 000000003af50fe8
+x12: 0000000000000000 x13: 0000000000000200
+x14: 00000000ffffffff x15: 000000003af368a8
+x16: 000000003b358f78 x17: 0000000000000000
+x18: 000000003af44d60 x19: f9400261a100009f
+x20: 0000000010000000 x21: 0000000000000002
+x22: 000000003af56a20 x23: 0000000000000002
+x24: 000000003b3e61ec x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 000000003af58dc0 x29: 000000003af368c0
+
+Code: d65f03c0 f9401693 8b130293 8b151a73 (f9400660) 
+Resetting CPU ...
+
+resetting ...
+
+
+U-Boot 2024.01 (Oct 14 2026 - 14:45:42 +0530)
+
+DRAM:  948 MiB (effective 7.9 GiB)
+RPI 4 Model B (0xd03115)
+Core:  213 devices, 16 uclasses, devicetree: board
+MMC:   mmcnr@7e300000: 1, mmc@7e340000: 0
+Loading Environment from FAT... Unable to read "uboot.env" from mmc0:1... 
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+Net:   eth0: ethernet@7d580000
+PCIe BRCM: link up, 5.0 Gbps x1 (SSC)
+starting USB...
+Bus xhci_pci: Register 5000420 NbrPorts 5
+Starting the controller
+USB XHCI 1.00
+scanning bus xhci_pci for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Hit any key to stop autoboot:  2  1  0 
+Card did not respond to voltage select! : -110
+ethernet@7d580000 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+bcmgenet: PHY startup failed: -110
+ethernet@7d580000 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+bcmgenet: PHY startup failed: -110
+U-Boot> fatload mmc 0 0x30000000 sel4benchapp-image-arm-bcm2711
+1078800 bytes read in 107 ms (9.6 MiB/s)
+U-Boot> bootelf         
+Unknown command '' - try 'help'
+U-Boot> 
+Unknown command '' - try 'help'
+U-Boot> 
+Unknown command '' - try 'help'
+U-Boot> bootelf 0x30000000
+U-Boot> fatload mmc 0 0x30000000 sel4benchapp-image-arm-bcm2711
+1078800 bytes read in 107 ms (9.6 MiB/s)
+U-Boot> bootelf 0x30000000
+U-Boot> setenv autostart yes
+U-Boot> fatload mmc 0 0x30000000 sel4benchapp-image-arm-bcm2711
+1078800 bytes read in 107 ms (9.6 MiB/s)
+U-Boot> bootelf         setenv autostart yes
+U-Boot> fatload mmc 0 0x30000000 sel4benchapp-image-arm-bcm2711
+1078800 bytes read in 106 ms (9.7 MiB/s)
+U-Boot> bootelf 0x30000000
+## Starting application at 0x10000000 ...
+
+ELF-loader started on CPU: ARM Ltd. Cortex-A72 r0p3
+  paddr=[10000000..10103097]
+No DTB passed in from boot loader.
+Looking for DTB in CPIO archive...found at 1002c060.
+Loaded DTB from 1002c060.
+   paddr=[435000..43bfff]
+ELF-loading image 'kernel' to 200000
+  paddr=[200000..434fff]
+  vaddr=[ffffffffc0000000..ffffffffc0234fff]
+  virt_entry=ffffffffc0000000
+ELF-loading image 'rootserver' to 43c000
+  paddr=[43c000..584fff]
+  vaddr=[400000..548fff]
+  virt_entry=4227a8
+Boot cpu id = 0x0, index=0
+Core 1 is up with logic id 1
+Core 2 is up with logic id 2
+Core 3 is up with logic id 3
+Enabling MMU and jumping to entry point...
+
+Range for vaddr 0x10001000 with 1 4k pages not reserved!
+Mapping new pages to extend brk region failed
+
+
+[;1m[37mse[32mL4[37m Benchmark[0m
+[32m==============[37m
+
+Switching to a safer, bigger stack... 
+Setting up global fault handler...
+Failed to allocate object of size 140737488355328, error 1
+Failed to allocate object of size 70368744177664, error 1
+Failed to allocate object of size 35184372088832, error 1
+Failed to allocate object of size 17592186044416, error 1
+Failed to allocate object of size 8796093022208, error 1
+Failed to allocate object of size 4398046511104, error 1
+Failed to allocate object of size 2199023255552, error 1
+Failed to allocate object of size 1099511627776, error 1
+Failed to allocate object of size 549755813888, error 1
+Failed to allocate object of size 274877906944, error 1
+Failed to allocate object of size 137438953472, error 1
+Failed to allocate object of size 68719476736, error 1
+Failed to allocate object of size 34359738368, error 1
+Failed to allocate object of size 17179869184, error 1
+Failed to allocate object of size 8589934592, error 1
+Failed to allocate object of size 4294967296, error 1
+
+ipc Benchmarks (iteration 0)
+============================
+
+
+smp Benchmarks (iteration 0)
+============================
+
+JSON OUTPUT
+[{"Benchmark": "One way IPC microbenchmarks", "Results": [{"Function": "seL4_Call", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": true, "IPC length": 0, "Min": 523, "Max": 523, "Mean": 523.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 523.0, "Median": 523.0, "1st quantile": 523.0, "3rd quantile": 523.0, "Samples": 16, "Raw results": [523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523]}, {"Function": "seL4_ReplyRecv", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": true, "IPC length": 0, "Min": 526, "Max": 526, "Mean": 526.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 526.0, "Median": 526.0, "1st quantile": 526.0, "3rd quantile": 526.0, "Samples": 16, "Raw results": [526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526]}, {"Function": "seL4_Call", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 484, "Max": 484, "Mean": 484.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 484.0, "Median": 484.0, "1st quantile": 484.0, "3rd quantile": 484.0, "Samples": 16, "Raw results": [484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484]}, {"Function": "seL4_Call (FPU)", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 644, "Max": 644, "Mean": 644.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 644.0, "Median": 644.0, "1st quantile": 644.0, "3rd quantile": 644.0, "Samples": 16, "Raw results": [644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644]}, {"Function": "seL4_ReplyRecv", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 517, "Max": 517, "Mean": 517.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 517.0, "Median": 517.0, "1st quantile": 517.0, "3rd quantile": 517.0, "Samples": 16, "Raw results": [517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517]}, {"Function": "seL4_ReplyRecv (FPU)", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 669, "Max": 675, "Mean": 675.0, "Stddev": 1.461, "Variance": 2.0, "Mode": 669.0, "Median": 675.0, "1st quantile": 675.0, "3rd quantile": 675.0, "Samples": 16, "Raw results": [675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 669, 675]}, {"Function": "seL4_Send", "Direction": "client->server", "Client Prio": 253, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 852, "Max": 870, "Mean": 861.0, "Stddev": 6.928, "Variance": 45.0, "Mode": 867.0, "Median": 864.0, "1st quantile": 854.25, "3rd quantile": 867.0, "Samples": 16, "Raw results": [852, 870, 867, 867, 852, 852, 867, 864, 864, 864, 867, 852, 855, 867, 855, 855]}, {"Function": "seL4_Call", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 10, "Min": 895, "Max": 900, "Mean": 897.0, "Stddev": 2.066, "Variance": 4.0, "Mode": 895.0, "Median": 895.0, "1st quantile": 895.0, "3rd quantile": 898.0, "Samples": 16, "Raw results": [895, 895, 900, 895, 898, 895, 898, 898, 895, 898, 895, 895, 900, 900, 895, 895]}, {"Function": "seL4_ReplyRecv", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 10, "Min": 945, "Max": 948, "Mean": 948.0, "Stddev": 1.033, "Variance": 1.0, "Mode": 945.0, "Median": 948.0, "1st quantile": 948.0, "3rd quantile": 948.0, "Samples": 16, "Raw results": [948, 948, 948, 948, 948, 948, 945, 948, 948, 948, 948, 948, 948, 948, 948, 948]}], "Iteration": 0}, {"Benchmark": "SMP Benchmark", "Results": [{"Cycles": 500, "Cores": 1, "Min": 242010, "Max": 242320, "Mean": 242282.0, "Stddev": 95.661, "Variance": 8236.0, "Mode": 242310.0, "Median": 242310.0, "1st quantile": 242310.0, "3rd quantile": 242310.0, "Samples": 10, "Raw results": [242310, 242310, 242010, 242310, 242320, 242310, 242310, 242310, 242310, 242320]}, {"Cycles": 500, "Cores": 2, "Min": 437370, "Max": 438360, "Mean": 437753.0, "Stddev": 362.401, "Variance": 118201.0, "Mode": 437370.0, "Median": 437735.0, "1st quantile": 437442.5, "3rd quantile": 437820.0, "Samples": 10, "Raw results": [437840, 437710, 437370, 437760, 437370, 437760, 437380, 437630, 438350, 438360]}, {"Cycles": 500, "Cores": 3, "Min": 556530, "Max": 561480, "Mean": 558290.0, "Stddev": 1553.898, "Variance": 2173140.0, "Mode": 556530.0, "Median": 557725.0, "1st quantile": 557167.5, "3rd quantile": 559222.5, "Samples": 10, "Raw results": [561480, 557250, 558900, 557020, 557910, 556530, 559800, 557140, 557540, 559330]}, {"Cycles": 500, "Cores": 4, "Min": 507870, "Max": 508640, "Mean": 508037.0, "Stddev": 224.006, "Variance": 45161.0, "Mode": 507890.0, "Median": 508020.0, "1st quantile": 507895.0, "3rd quantile": 508040.0, "Samples": 10, "Raw results": [508640, 508050, 507890, 508040, 507870, 507910, 508040, 508020, 507890, 508020]}, {"Cycles": 4000, "Cores": 1, "Min": 63300, "Max": 63310, "Mean": 63305.0, "Stddev": 5.27, "Variance": 25.0, "Mode": 63300.0, "Median": 63305.0, "1st quantile": 63300.0, "3rd quantile": 63310.0, "Samples": 10, "Raw results": [63300, 63310, 63300, 63310, 63300, 63310, 63300, 63310, 63300, 63310]}, {"Cycles": 4000, "Cores": 2, "Min": 123170, "Max": 123220, "Mean": 123191.0, "Stddev": 17.288, "Variance": 269.0, "Mode": 123180.0, "Median": 123180.0, "1st quantile": 123180.0, "3rd quantile": 123207.5, "Samples": 10, "Raw results": [123220, 123200, 123180, 123210, 123180, 123180, 123210, 123180, 123170, 123180]}, {"Cycles": 4000, "Cores": 3, "Min": 184750, "Max": 184820, "Mean": 184803.0, "Stddev": 24.518, "Variance": 541.0, "Mode": 184800.0, "Median": 184815.0, "1st quantile": 184800.0, "3rd quantile": 184820.0, "Samples": 10, "Raw results": [184820, 184810, 184820, 184770, 184800, 184820, 184800, 184750, 184820, 184820]}, {"Cycles": 4000, "Cores": 4, "Min": 245940, "Max": 245970, "Mean": 245958.0, "Stddev": 7.888, "Variance": 56.0, "Mode": 245960.0, "Median": 245960.0, "1st quantile": 245960.0, "3rd quantile": 245960.0, "Samples": 10, "Raw results": [245970, 245960, 245950, 245960, 245960, 245960, 245940, 245960, 245960, 245960]}, {"Cycles": 32000, "Cores": 1, "Min": 9160, "Max": 9170, "Mean": 9164.0, "Stddev": 5.164, "Variance": 24.0, "Mode": 9160.0, "Median": 9160.0, "1st quantile": 9160.0, "3rd quantile": 9170.0, "Samples": 10, "Raw results": [9170, 9160, 9160, 9170, 9160, 9170, 9160, 9160, 9170, 9160]}, {"Cycles": 32000, "Cores": 2, "Min": 18240, "Max": 18260, "Mean": 18255.0, "Stddev": 7.071, "Variance": 45.0, "Mode": 18250.0, "Median": 18260.0, "1st quantile": 18250.0, "3rd quantile": 18260.0, "Samples": 10, "Raw results": [18260, 18250, 18260, 18250, 18250, 18260, 18260, 18260, 18240, 18260]}, {"Cycles": 32000, "Cores": 3, "Min": 27370, "Max": 27390, "Mean": 27382.0, "Stddev": 9.189, "Variance": 76.0, "Mode": 27370.0, "Median": 27385.0, "1st quantile": 27372.5, "3rd quantile": 27390.0, "Samples": 10, "Raw results": [27390, 27370, 27390, 27380, 27390, 27370, 27390, 27380, 27390, 27370]}, {"Cycles": 32000, "Cores": 4, "Min": 36490, "Max": 36510, "Mean": 36500.0, "Stddev": 10.541, "Variance": 100.0, "Mode": 36490.0, "Median": 36500.0, "1st quantile": 36490.0, "3rd quantile": 36510.0, "Samples": 10, "Raw results": [36490, 36510, 36490, 36510, 36490, 36510, 36490, 36510, 36490, 36510]}], "Iteration": 0}]END JSON OUTPUT
+All is well in the universe.
+
+
+Fin

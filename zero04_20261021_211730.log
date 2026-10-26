@@ -1,0 +1,83 @@
+
+
+U-Boot 2024.01 (Oct 14 2026 - 14:45:42 +0530)
+
+DRAM:  948 MiB (effective 7.9 GiB)
+RPI 4 Model B (0xd03115)
+Core:  213 devices, 16 uclasses, devicetree: board
+MMC:   mmcnr@7e300000: 1, mmc@7e340000: 0
+Loading Environment from FAT... OK
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+Net:   eth0: ethernet@7d580000
+PCIe BRCM: link up, 5.0 Gbps x1 (SSC)
+starting USB...
+Bus xhci_pci: Register 5000420 NbrPorts 5
+Starting the controller
+USB XHCI 1.00
+scanning bus xhci_pci for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Hit any key to stop autoboot:  2  1  0 
+1078800 bytes read in 106 ms (9.7 MiB/s)
+## Starting application at 0x10000000 ...
+
+ELF-loader started on CPU: ARM Ltd. Cortex-A72 r0p3
+  paddr=[10000000..10103097]
+No DTB passed in from boot loader.
+Looking for DTB in CPIO archive...found at 1002c060.
+Loaded DTB from 1002c060.
+   paddr=[435000..43bfff]
+ELF-loading image 'kernel' to 200000
+  paddr=[200000..434fff]
+  vaddr=[ffffffffc0000000..ffffffffc0234fff]
+  virt_entry=ffffffffc0000000
+ELF-loading image 'rootserver' to 43c000
+  paddr=[43c000..584fff]
+  vaddr=[400000..548fff]
+  virt_entry=422778
+Boot cpu id = 0x0, index=0
+Core 1 is up with logic id 1
+Core 2 is up with logic id 2
+Core 3 is up with logic id 3
+Enabling MMU and jumping to entry point...
+
+Range for vaddr 0x10001000 with 1 4k pages not reserved!
+Mapping new pages to extend brk region failed
+
+
+[;1m[37mse[32mL4[37m Benchmark[0m
+[32m==============[37m
+
+Switching to a safer, bigger stack... 
+Setting up global fault handler...
+Failed to allocate object of size 140737488355328, error 1
+Failed to allocate object of size 70368744177664, error 1
+Failed to allocate object of size 35184372088832, error 1
+Failed to allocate object of size 17592186044416, error 1
+Failed to allocate object of size 8796093022208, error 1
+Failed to allocate object of size 4398046511104, error 1
+Failed to allocate object of size 2199023255552, error 1
+Failed to allocate object of size 1099511627776, error 1
+Failed to allocate object of size 549755813888, error 1
+Failed to allocate object of size 274877906944, error 1
+Failed to allocate object of size 137438953472, error 1
+Failed to allocate object of size 68719476736, error 1
+Failed to allocate object of size 34359738368, error 1
+Failed to allocate object of size 17179869184, error 1
+Failed to allocate object of size 8589934592, error 1
+Failed to allocate object of size 4294967296, error 1
+
+ipc Benchmarks (iteration 0)
+============================
+
+
+smp Benchmarks (iteration 0)
+============================
+
+JSON OUTPUT
+[{"Benchmark": "One way IPC microbenchmarks", "Results": [{"Function": "seL4_Call", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": true, "IPC length": 0, "Min": 523, "Max": 523, "Mean": 523.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 523.0, "Median": 523.0, "1st quantile": 523.0, "3rd quantile": 523.0, "Samples": 16, "Raw results": [523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523, 523]}, {"Function": "seL4_ReplyRecv", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": true, "IPC length": 0, "Min": 526, "Max": 526, "Mean": 526.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 526.0, "Median": 526.0, "1st quantile": 526.0, "3rd quantile": 526.0, "Samples": 16, "Raw results": [526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526]}, {"Function": "seL4_Call", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 484, "Max": 484, "Mean": 484.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 484.0, "Median": 484.0, "1st quantile": 484.0, "3rd quantile": 484.0, "Samples": 16, "Raw results": [484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484, 484]}, {"Function": "seL4_Call (FPU)", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 644, "Max": 644, "Mean": 644.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 644.0, "Median": 644.0, "1st quantile": 644.0, "3rd quantile": 644.0, "Samples": 16, "Raw results": [644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644, 644]}, {"Function": "seL4_ReplyRecv", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 517, "Max": 517, "Mean": 517.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 517.0, "Median": 517.0, "1st quantile": 517.0, "3rd quantile": 517.0, "Samples": 16, "Raw results": [517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517, 517]}, {"Function": "seL4_ReplyRecv (FPU)", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 669, "Max": 675, "Mean": 675.0, "Stddev": 1.461, "Variance": 2.0, "Mode": 669.0, "Median": 675.0, "1st quantile": 675.0, "3rd quantile": 675.0, "Samples": 16, "Raw results": [675, 669, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675, 675]}, {"Function": "seL4_Send", "Direction": "client->server", "Client Prio": 253, "Server Prio": 254, "Same vspace?": false, "IPC length": 0, "Min": 852, "Max": 867, "Mean": 860.0, "Stddev": 5.842, "Variance": 32.0, "Mode": 855.0, "Median": 859.5, "1st quantile": 855.0, "3rd quantile": 864.0, "Samples": 16, "Raw results": [867, 867, 855, 852, 867, 852, 864, 855, 855, 855, 855, 864, 855, 864, 864, 864]}, {"Function": "seL4_Call", "Direction": "client->server", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 10, "Min": 895, "Max": 900, "Mean": 896.0, "Stddev": 1.789, "Variance": 3.0, "Mode": 895.0, "Median": 895.0, "1st quantile": 895.0, "3rd quantile": 898.0, "Samples": 16, "Raw results": [898, 895, 895, 898, 895, 895, 895, 898, 898, 898, 895, 898, 895, 895, 895, 900]}, {"Function": "seL4_ReplyRecv", "Direction": "server->client", "Client Prio": 254, "Server Prio": 254, "Same vspace?": false, "IPC length": 10, "Min": 945, "Max": 955, "Mean": 948.0, "Stddev": 2.309, "Variance": 5.0, "Mode": 948.0, "Median": 948.0, "1st quantile": 948.0, "3rd quantile": 948.0, "Samples": 16, "Raw results": [948, 948, 948, 948, 948, 948, 948, 948, 955, 945, 948, 948, 948, 945, 948, 945]}], "Iteration": 0}, {"Benchmark": "SMP Benchmark", "Results": [{"Cycles": 0, "Cores": 1, "Min": 1033030, "Max": 1033050, "Mean": 1033039.0, "Stddev": 7.379, "Variance": 49.0, "Mode": 1033040.0, "Median": 1033040.0, "1st quantile": 1033032.5, "3rd quantile": 1033040.0, "Samples": 10, "Raw results": [1033040, 1033040, 1033040, 1033030, 1033030, 1033050, 1033040, 1033040, 1033050, 1033030]}, {"Cycles": 0, "Cores": 2, "Min": 1403720, "Max": 1447050, "Mean": 1418210.0, "Stddev": 18168.268, "Variance": 297077360.0, "Mode": 1403720.0, "Median": 1409040.0, "1st quantile": 1405750.0, "3rd quantile": 1431735.0, "Samples": 10, "Raw results": [1408260, 1405960, 1438460, 1411560, 1447050, 1409820, 1446810, 1403720, 1405680, 1404780]}, {"Cycles": 0, "Cores": 3, "Min": 1328140, "Max": 1336810, "Mean": 1331434.0, "Stddev": 3230.628, "Variance": 9393264.0, "Mode": 1328140.0, "Median": 1330095.0, "1st quantile": 1328967.5, "3rd quantile": 1333997.5, "Samples": 10, "Raw results": [1328810, 1329330, 1328850, 1330860, 1328140, 1329320, 1334830, 1335890, 1336810, 1331500]}, {"Cycles": 0, "Cores": 4, "Min": 1273310, "Max": 1275660, "Mean": 1274868.0, "Stddev": 803.268, "Variance": 580716.0, "Mode": 1274510.0, "Median": 1274860.0, "1st quantile": 1274450.0, "3rd quantile": 1275612.5, "Samples": 10, "Raw results": [1273310, 1275210, 1274430, 1274180, 1275590, 1275660, 1274510, 1275620, 1274510, 1275660]}, {"Cycles": 500, "Cores": 1, "Min": 604990, "Max": 605790, "Mean": 605635.0, "Stddev": 326.981, "Variance": 96225.0, "Mode": 604990.0, "Median": 605790.0, "1st quantile": 605790.0, "3rd quantile": 605790.0, "Samples": 10, "Raw results": [605040, 604990, 605790, 605790, 605790, 605790, 605790, 605790, 605790, 605790]}, {"Cycles": 500, "Cores": 2, "Min": 1094290, "Max": 1095780, "Mean": 1094935.0, "Stddev": 583.919, "Variance": 306865.0, "Mode": 1094610.0, "Median": 1094620.0, "1st quantile": 1094610.0, "3rd quantile": 1095487.5, "Samples": 10, "Raw results": [1095780, 1095770, 1095750, 1094620, 1094600, 1094610, 1094610, 1094620, 1094290, 1094700]}, {"Cycles": 500, "Cores": 3, "Min": 1398750, "Max": 1410170, "Mean": 1402197.0, "Stddev": 3695.027, "Variance": 12287901.0, "Mode": 1398750.0, "Median": 1401260.0, "1st quantile": 1399610.0, "3rd quantile": 1402875.0, "Samples": 10, "Raw results": [1399530, 1401560, 1403070, 1406840, 1398950, 1402290, 1398750, 1399850, 1410170, 1400960]}, {"Cycles": 500, "Cores": 4, "Min": 1267500, "Max": 1270410, "Mean": 1269121.0, "Stddev": 1376.545, "Variance": 1705389.0, "Mode": 1267500.0, "Median": 1269885.0, "1st quantile": 1267555.0, "3rd quantile": 1270315.0, "Samples": 10, "Raw results": [1270030, 1270060, 1267540, 1270400, 1267500, 1270410, 1269740, 1267520, 1270410, 1267600]}, {"Cycles": 4000, "Cores": 1, "Min": 158260, "Max": 158260, "Mean": 158260.0, "Stddev": 0.0, "Variance": 0.0, "Mode": 158260.0, "Median": 158260.0, "1st quantile": 158260.0, "3rd quantile": 158260.0, "Samples": 10, "Raw results": [158260, 158260, 158260, 158260, 158260, 158260, 158260, 158260, 158260, 158260]}, {"Cycles": 4000, "Cores": 2, "Min": 307820, "Max": 308020, "Mean": 307908.0, "Stddev": 53.083, "Variance": 2536.0, "Mode": 307910.0, "Median": 307910.0, "1st quantile": 307910.0, "3rd quantile": 307920.0, "Samples": 10, "Raw results": [307910, 307920, 307910, 307840, 307820, 307920, 307910, 307920, 307910, 308020]}, {"Cycles": 4000, "Cores": 3, "Min": 461900, "Max": 462060, "Mean": 461984.0, "Stddev": 65.524, "Variance": 3864.0, "Mode": 461900.0, "Median": 462015.0, "1st quantile": 461915.0, "3rd quantile": 462037.5, "Samples": 10, "Raw results": [461910, 462020, 462040, 462040, 462060, 461930, 462010, 461900, 461900, 462030]}, {"Cycles": 4000, "Cores": 4, "Min": 614880, "Max": 614890, "Mean": 614881.0, "Stddev": 3.162, "Variance": 9.0, "Mode": 614880.0, "Median": 614880.0, "1st quantile": 614880.0, "3rd quantile": 614880.0, "Samples": 10, "Raw results": [614880, 614890, 614880, 614880, 614880, 614880, 614880, 614880, 614880, 614880]}, {"Cycles": 32000, "Cores": 1, "Min": 22900, "Max": 22910, "Mean": 22909.0, "Stddev": 3.162, "Variance": 9.0, "Mode": 22900.0, "Median": 22910.0, "1st quantile": 22910.0, "3rd quantile": 22910.0, "Samples": 10, "Raw results": [22910, 22910, 22910, 22910, 22900, 22910, 22910, 22910, 22910, 22910]}, {"Cycles": 32000, "Cores": 2, "Min": 45620, "Max": 45640, "Mean": 45635.0, "Stddev": 7.071, "Variance": 45.0, "Mode": 45630.0, "Median": 45640.0, "1st quantile": 45630.0, "3rd quantile": 45640.0, "Samples": 10, "Raw results": [45640, 45630, 45640, 45640, 45630, 45640, 45630, 45640, 45640, 45620]}, {"Cycles": 32000, "Cores": 3, "Min": 68440, "Max": 68460, "Mean": 68456.0, "Stddev": 6.992, "Variance": 44.0, "Mode": 68450.0, "Median": 68460.0, "1st quantile": 68452.5, "3rd quantile": 68460.0, "Samples": 10, "Raw results": [68440, 68460, 68450, 68460, 68460, 68460, 68460, 68450, 68460, 68460]}, {"Cycles": 32000, "Cores": 4, "Min": 91240, "Max": 91260, "Mean": 91244.0, "Stddev": 8.433, "Variance": 64.0, "Mode": 91240.0, "Median": 91240.0, "1st quantile": 91240.0, "3rd quantile": 91240.0, "Samples": 10, "Raw results": [91260, 91240, 91240, 91260, 91240, 91240, 91240, 91240, 91240, 91240]}], "Iteration": 0}]END JSON OUTPUT
+All is well in the universe.
+
+
+Fin
