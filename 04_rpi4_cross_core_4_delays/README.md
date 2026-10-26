@@ -14,8 +14,8 @@
 Rebuild: ninja only, in build_rpi4. The image was kept locally as
 images/sel4benchapp-image-crosscore (not in the repo).
 
-Logs: ../cross01_20261022_082313.log, ../cross02_*.log (2 files),
-../cross03_*.log, ../cross04_*.log and ../cross05_*.log. That is 6 valid
+Logs: ../logs/cross01_20261022_082313.log, ../logs/cross02_*.log (2 files),
+../logs/cross03_*.log, ../logs/cross04_*.log and ../logs/cross05_*.log. That is 6 valid
 runs. Two empty cross01 logs are excluded. Workbook sheets
 "SMP Scaling (RPi4B cross-core)" and "Same vs Cross Core".
 

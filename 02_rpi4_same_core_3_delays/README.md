@@ -20,6 +20,6 @@ fatload mmc 0 0x30000000 sel4benchapp-image-arm-bcm2711 then bootelf
 kernel=u-boot.bin, device_tree=bcm2711-rpi-4-b.dtb.
 Output captured over a USB-TTL serial cable with picocom at 115200 baud.
 
-Logs: ../run01_*.log to ../run05_*.log (5 full power-cycle runs, workbook
+Logs: ../logs/run01_*.log to ../logs/run05_*.log (5 full power-cycle runs, workbook
 sheet "SMP Scaling (RPi4B)"). run06 is an extra complete run on the same
 image and is not part of the 5-run means.

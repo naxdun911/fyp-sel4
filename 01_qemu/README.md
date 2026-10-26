@@ -19,5 +19,5 @@ Run (from build_smp_tmr):
 
     qemu-system-aarch64 -machine virt,virtualization=on,highmem=off,secure=off,gic-version=2 -cpu cortex-a53 -nographic -m size=1024 -smp 4 -kernel images/sel4benchapp-image-arm-qemu-arm-virt
 
-Log: ../qemu-emulated/smp_arm_tmr_run1.log (workbook sheet "SMP Scaling").
-Other files in ../qemu-emulated are other QEMU attempts.
+Log: ../logs/qemu-emulated/smp_arm_tmr_run1.log (workbook sheet "SMP Scaling").
+Other files in ../logs/qemu-emulated are other QEMU attempts.
