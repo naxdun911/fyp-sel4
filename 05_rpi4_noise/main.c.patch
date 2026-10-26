@@ -1,0 +1,55 @@
+--- /home/naxdun/sel4bench-arm/projects/sel4bench/apps/smp/src/main.c.orig	2026-10-22 08:18:38.688360015 +0530
++++ main.c	2026-10-26 18:12:04.564681640 +0530
+@@ -24,8 +24,14 @@
+ #define N_ARGS 5
+ #define ZIGSEED 12345678
+ 
++/* Core offset of pong relative to ping: 0 = same-core pairs, 2 = cross-core pairs. */
++#define PONG_CORE_OFFSET 0
++
+ static double current_delay_cycle;
+ 
++/* Delay of noise pairs (pair id above 0). Pair 0 is the victim and uses the swept delay. */
++#define NOISE_DELAY_CYCLES 0
++
+ typedef struct _per_core_data {
+     volatile uint32_t calls_completed;
+     char padding[CACHE_LN_SZ - sizeof(uint32_t)];
+@@ -77,7 +83,7 @@
+ {
+     ccnt_t start, now, delay;
+ 
+-    delay = current_delay_cycle;
++    delay = (id == 0) ? current_delay_cycle : NOISE_DELAY_CYCLES;
+     start = sel4bench_get_cycle_count();
+     do {
+         now = sel4bench_get_cycle_count();
+@@ -169,9 +175,8 @@
+     for (int i = 0; i < nr_cores; i++) {
+         end[i] = pp_threads[i].pp_ipcs.calls_completed;
+     }
+-    for (int i = 0; i < nr_cores; i++) {
+-        total += (end[i] - start[i]);
+-    }
++    /* victim only: count pair 0 on Core_0, ignore noise pairs */
++    total = end[0] - start[0];
+ 
+     /* normalise throughput to ipc/sec, force 64 bit against mult overflow */
+     return ((uint64_t) total * NS_IN_S) / SAMPLE_TIME;
+@@ -293,7 +298,15 @@
+ 
+         error = sel4utils_set_sched_affinity(&pp_threads[i].ping, params);
+         assert(!error);
+-        error = sel4utils_set_sched_affinity(&pp_threads[i].pong, params);
++        /* pong runs on core (i + PONG_CORE_OFFSET) % nr_cores */
++        sched_params_t pong_params = {0};
++#ifdef CONFIG_KERNEL_MCS
++        pong_params = sched_params_round_robin(pong_params, &env->simple, (i + PONG_CORE_OFFSET) % nr_cores,
++                                               CONFIG_BOOT_THREAD_TIME_SLICE * US_IN_MS);
++#else
++        pong_params.core = (i + PONG_CORE_OFFSET) % nr_cores;
++#endif
++        error = sel4utils_set_sched_affinity(&pp_threads[i].pong, pong_params);
+         assert(!error);
+     }
+ 
