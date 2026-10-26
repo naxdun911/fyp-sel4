@@ -1,0 +1,32 @@
+Runs parsed: 6
+
+=== Victim delay 0 cycles (Core_0 IPC/s) ===
+Noise cores   Mean IPC/s   SD(runs)  Spread%   Drop vs 0 noise   Drop range over runs
+     0          1031921       1227     0.12%          0.0%          0.0% to 0.0%
+     1           720935      10592     1.47%         30.1%         28.9% to 31.2%
+     2           443969        487     0.11%         57.0%         56.9% to 57.1%
+     3           318503        252     0.08%         69.1%         69.1% to 69.2%
+
+=== Victim delay 500 cycles (Core_0 IPC/s) ===
+Noise cores   Mean IPC/s   SD(runs)  Spread%   Drop vs 0 noise   Drop range over runs
+     0           602629       1886     0.31%          0.0%          0.0% to 0.0%
+     1           424143       3685     0.87%         29.6%         28.6% to 30.5%
+     2           456408        858     0.19%         24.3%         23.9% to 24.7%
+     3           318473        113     0.04%         47.2%         47.0% to 47.3%
+
+=== Victim delay 4000 cycles (Core_0 IPC/s) ===
+Noise cores   Mean IPC/s   SD(runs)  Spread%   Drop vs 0 noise   Drop range over runs
+     0           158047        137     0.09%          0.0%          0.0% to 0.0%
+     1           144876       1356     0.94%          8.3%          7.2% to 9.1%
+     2           141795        227     0.16%         10.3%         10.1% to 10.4%
+     3           127593         37     0.03%         19.3%         19.2% to 19.4%
+
+=== Victim delay 32000 cycles (Core_0 IPC/s) ===
+Noise cores   Mean IPC/s   SD(runs)  Spread%   Drop vs 0 noise   Drop range over runs
+     0            22905          3     0.01%          0.0%          0.0% to 0.0%
+     1            22618         21     0.09%          1.3%          1.2% to 1.4%
+     2            22470          3     0.01%          1.9%          1.9% to 1.9%
+     3            22014         15     0.07%          3.9%          3.8% to 4.0%
+
+=== Check: more noise gave HIGHER victim throughput (per run) ===
+   500 cycles: 2 noise cores higher than 1 in 6/6 runs
