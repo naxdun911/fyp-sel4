@@ -1,7 +1,7 @@
 # fyp-sel4
 
 Performance Isolation for Multicore seL4 (final year project).
-Group 19
+Group 20
 
 seL4 serialises kernel execution with a Big Kernel Lock (BKL), so IPC load on
 one core can interfere with other cores. This repo holds the baseline
